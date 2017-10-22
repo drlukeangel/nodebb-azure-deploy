@@ -39,7 +39,8 @@
         "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
          "siteConfig": {
                    "AlwaysOn": true
-               }
+               },
+        "webSocketsEnabled": "true"
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]"
@@ -60,6 +61,7 @@
             "DOCKER_CUSTOM_IMAGE_RUN_COMMAND": "",
             "PORT": "4567",
             "WEBSITES_ENABLE_APP_SERVICE_STORAGE":"true"
+            
           }
         }
       ]
