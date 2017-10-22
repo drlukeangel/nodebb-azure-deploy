@@ -5,14 +5,14 @@
 Automated deployment of NodeBB with the following resourses on Azure :
 * Service Plan using Web App on linux (Preview) - Basic B1 Plan
 * Redis Cache on PaaS - Basic C0 Plan
-* WebApp hosted on the Service Plan calling the NodeBB Container : drlukeangelheker/nodebb-on-Azure
+* WebApp hosted on the Service Plan calling the NodeBB Container : drlukeangel/nodebb-on-Azure
 
 ## Walktrough
 
 1. Click on <a  
 href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdrlukeangel%2Fnodebb-azure-deploy%2Fmaster%2Fdeploy.json" target="_blank"><img src="http://azuredeploy.net/deploybutton.png"/></a>
 2. Give a name for the resource Group
-3. Pick a location !! Because the **Service Plan on Linux is still in preview**, you can only pick the following one : **West Europe** - **Southeast Asia** - **West US** 
+3. Pick a location
 4. Fill the suffix field. This one allow you to name your ressources on Azure, for example if you enter 'drlukeangel' you will have the following name : 
     * nodebb-red-**drlukeangel**XXXXX (Redis resource)
     * nodebb-sp-**drlukeangel**XXXXX (Service Plan resource)
