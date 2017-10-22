@@ -36,7 +36,10 @@
       "location": "[resourceGroup().location]",
       "properties": {
         "name": "[variables('appName')]",
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]"
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]",
+         "siteConfig": {
+                   "AlwaysOn": true
+               }
       },
       "dependsOn": [
         "[resourceId('Microsoft.Web/serverfarms', variables('servicePlanName'))]"
@@ -55,7 +58,8 @@
           "properties": {
             "DOCKER_CUSTOM_IMAGE_NAME": "drlukeangel/nodebb-docker-azure",  
             "DOCKER_CUSTOM_IMAGE_RUN_COMMAND": "",
-            "PORT": "4567"
+            "PORT": "4567",
+            "WEBSITES_ENABLE_APP_SERVICE_STORAGE":"true"
           }
         }
       ]
